@@ -1,0 +1,10 @@
+/log
+.sass-cache
+node_modules
+
+# Ignore editor files
+*~
+\#*\#
+
+# Ignore OS-specific
+.DS_Store
