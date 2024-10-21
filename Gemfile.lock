@@ -9,7 +9,7 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
-    capistrano-cul (0.3.0)
+    capistrano-cul (0.3.1)
       bcrypt_pbkdf (>= 1.0.1)
       capistrano (~> 3.1)
       capistrano-git-with-submodules (~> 2.0)
@@ -34,7 +34,7 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano (~> 3.9.1)
-  capistrano-cul (= 0.3.0)
+  capistrano-cul (= 0.3.1)
 
 BUNDLED WITH
    1.17.3
