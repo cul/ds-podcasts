@@ -1,0 +1,90 @@
+/*
+ Theme Name:   Checathlon child theme
+ Description:  Checathlon Child Theme for Columbia University Library Podcasts
+ Template:     checathlon
+ Text Domain:  checathlonchild
+ Version: 1.0.1
+*/
+
+/* adjust footer widget size */
+
+#footer-area-1,
+#footer-area-2 {
+  width: 50%;
+}
+
+/* modify page-header font to match body */
+
+.title-font,
+.page-title,
+.after-content-widget-area .widget:first-of-type .widget-title,
+.front-page-widget-area .widget:first-of-type .widget-title,
+blockquote {
+	font-family: "Source Sans Pro", serif;
+}
+
+/* colophon link color */
+
+#colophon a {
+  color: #fff;
+}
+
+/* hide paintbrush icon from widget area */
+
+.widget-area svg {
+  display: none;
+}
+
+/* smaller article tiles for blog feed */
+
+@media screen and (min-width: 62.875em) {
+
+  .blog-wrapper .entry-header-bg {
+    width: 200px;
+  }
+
+  .blog-wrapper .entry-inner {
+    font-size: 1rem;
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+}
+
+/* light gray background for blog feed tiles */
+
+.blog-wrapper .entry-inner,
+.search-results .entry-inner,
+.mb-wrapper .hentry,
+.mb-form-topic,
+.grid-wrapper .entry-inner-wrapper,
+.entry-login-form {
+	background-color: #f0f0f0;
+}
+
+/* hide featured image from podcast post pages */
+
+.entry-inner-singular .entry-media {
+  display: none;
+}
+
+/* adjust padding after entry titles on post pages */
+
+@media screen and (min-width: 62.875em) {
+  .entry-inner-singular .page-header {
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* limit text excerpts to 3 lines. Using CSS here instead of native WordPress features because we need to include text in the WP Admin's Excerpt field in order to populate iTunes description fields (using post content would add too much to iTunes description). Using the Excerpt field overrides character limits on excerpts */
+
+.entry-summary p {
+  display: none;
+}
+
+.entry-summary p:first-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
