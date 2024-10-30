@@ -16,7 +16,7 @@ set :keep_releases, 2
 # Set up important directories
 set :wp_docroot, "#{fetch(:deploy_to)}/html"
 set :wp_content_path, "#{fetch(:deploy_to)}/wp-content"
-set :local_disk_wflogs_path, "/var/www/podcasts_dev/wflogs"
+set :local_disk_wflogs_path, "/var/log/wflogs/podcasts_dev/wflogs"
 set :multisite, true
 set :title, 'DS Podcasts'
 
