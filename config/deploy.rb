@@ -22,8 +22,9 @@ set :title, 'DS Podcasts'
 
 # List custom plugins and themes to pull in from repo
 set :wp_custom_themes, {
-  # Line below is just an example.
-  # 'cul-2019' => 'wp-content/themes/cul-2019/dist'
+  'checathlon' => 'wp-content/themes/checathlon',
+  'ds-podcast-child-theme' => 'wp-content/themes/ds-podcast-child-theme',
+  'ds-podcast-landing-theme' => 'wp-content/themes/ds-podcast-landing-theme'
 }
 
 set :additional_plugins_from_remote_zip, {
