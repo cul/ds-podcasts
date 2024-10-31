@@ -18,6 +18,7 @@ set :wp_docroot, "#{fetch(:deploy_to)}/html"
 set :wp_content_path, "#{fetch(:deploy_to)}/wp-content"
 set :local_disk_wflogs_path, "/var/log/wflogs/podcasts_dev/wflogs"
 set :multisite, true
+set :multisite_type, 'subdomains'
 set :title, 'DS Podcasts'
 
 # List custom plugins and themes to pull in from repo
