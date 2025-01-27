@@ -44,13 +44,15 @@ function checathlon_header_style() {
 	// Header image.
 	$header_image = esc_url( get_header_image() );
 
+  // Hiding Jetpack to fix php error
+
 	// Jetpack testimonial image.
-	$jetpack_options = get_theme_mod( 'jetpack_testimonials' );
-	$jetpack_testimonial_featured_image = $jetpack_options['featured-image'];
-	if ( is_post_type_archive( 'jetpack-testimonial' ) && isset( $jetpack_testimonial_featured_image ) && $jetpack_testimonial_featured_image ) {
-		$header_image_id = $jetpack_testimonial_featured_image;
-		$header_image    = esc_url( checathlon_attachment_url( $size = 'full', $id = $header_image_id ) );
-	}
+	// $jetpack_options = get_theme_mod( 'jetpack_testimonials' );
+	// $jetpack_testimonial_featured_image = $jetpack_options['featured-image'];
+	// if ( is_post_type_archive( 'jetpack-testimonial' ) && isset( $jetpack_testimonial_featured_image ) && $jetpack_testimonial_featured_image ) {
+	// 	$header_image_id = $jetpack_testimonial_featured_image;
+	// 	$header_image    = esc_url( checathlon_attachment_url( $size = 'full', $id = $header_image_id ) );
+	// }
 
 	// Jetpack portfolio image.
 	$jetpack_portfolio_featured_image = get_option( 'jetpack_portfolio_featured_image' );
