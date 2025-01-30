@@ -6,6 +6,24 @@
  Version: 1.0.1
 */
 
+/* cul banner */
+
+.site-top-banner {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: .5em 1em;
+}
+
+.site-top-banner .cul-logo {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.site-top-banner .cul-logo img {
+  max-width: 450px;
+  width: 100%;
+}
+
 /* adjust footer widget size */
 
 #footer-area-1,
