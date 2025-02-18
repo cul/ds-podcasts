@@ -1,4 +1,4 @@
-lock "3.9.1"
+lock "3.18.1"
 
 set :application, 'podcasts'
 set :deploy_name, "#{fetch(:application)}_#{fetch(:stage)}"
