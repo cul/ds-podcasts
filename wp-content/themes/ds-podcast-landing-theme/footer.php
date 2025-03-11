@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
       <h2>Contact us</h2>
-      <p>Contact the Digital Scholarship team via email at: <a href="mailto:publishing@library.columbia.edu">publishing@library.columbia.edu</a></p>
+      <p>Contact the Open Scholarship team at <a href="mailto:publishing@library.columbia.edu">publishing@library.columbia.edu</a></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
