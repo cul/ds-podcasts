@@ -106,3 +106,14 @@ blockquote {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+/* override the dark background on file download buttons */
+
+a.wp-block-file__button {
+  background-color: transparent !important;
+  border: 1px solid currentColor !important;
+  color: inherit !important; /* Uses the link color set by user in admin */
+  text-decoration: none !important;
+  border-radius: 5px !important;
+  transition: all 0.3s ease;
+}
