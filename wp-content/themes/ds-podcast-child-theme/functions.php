@@ -1,14 +1,6 @@
 <?php
 
-// enqueue child theme styles
-
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles', 20 );
-function my_theme_enqueue_styles() {
-    wp_enqueue_style( 'child-style', get_stylesheet_uri(),
-        array( 'checathlon-parent-style' ),
-        wp_get_theme()->get('Version')
-    );
-}
+// child theme styles are already enqueued by the parent theme's checathlon-style handle
 
 // add custom color picker to admin
 
