@@ -1,14 +1,6 @@
 <?php
 
-// enqueue child theme styles
-
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-function my_theme_enqueue_styles() {
-    wp_enqueue_style( 'child-style', get_stylesheet_uri(),
-        array( 'parenthandle' ), 
-        wp_get_theme()->get('Version')
-    );
-}
+// child theme styles are already enqueued by the parent theme's checathlon-style handle
 
 // add custom color picker to admin
 
@@ -17,6 +9,7 @@ function CULPodcast_customize_register( $wp_customize ) {
 	$wp_customize->add_setting('cp_link_color', array(
 		'default' => '#df003b',
 		'transport' => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
 	));
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cp_link_color_control', array(
@@ -54,13 +47,13 @@ function CULPodcast_customize_css() { ?>
     .menu-toggle:hover,
     .menu-toggle:focus,
     .menu-toggle:active  {
-			color: <?php echo get_theme_mod('cp_link_color'); ?>;
+			color: <?php echo esc_attr( get_theme_mod( 'cp_link_color', '#df003b' ) ); ?>;
 		}
 
     .archive-description:before,
     .page .entry-subtitle:before,
     .single .entry-subtitle:before {
-	    border-bottom: 4px solid <?php echo get_theme_mod('cp_link_color'); ?>;
+	    border-bottom: 4px solid <?php echo esc_attr( get_theme_mod( 'cp_link_color', '#df003b' ) ); ?>;
     }
 
     button,
@@ -81,7 +74,7 @@ function CULPodcast_customize_css() { ?>
     body .wp-core-ui .quicktags-toolbar input.button.button-small:hover,
     body .wp-core-ui .quicktags-toolbar input.button.button-small:focus,
     body .wp-core-ui .quicktags-toolbar input.button.button-small:active {
-	    background-color: <?php echo get_theme_mod('cp_link_color'); ?>;
+	    background-color: <?php echo esc_attr( get_theme_mod( 'cp_link_color', '#df003b' ) ); ?>;
     }
 
 	</style>
